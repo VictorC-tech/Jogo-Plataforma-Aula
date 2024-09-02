@@ -20,9 +20,9 @@ public class Player : MonoBehaviour
 
         this.rb.velocity = new Vector2(horizontal * 8f, this.rb.velocity.y);    
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Tecla espaço pressionada");
+            this.rb.AddForce(Vector2.up * 14f, ForceMode2D.Impulse);
         }
         if (Input.GetMouseButtonDown(1))
         {
